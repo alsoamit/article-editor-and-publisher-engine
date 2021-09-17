@@ -1,10 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-import Nav from "./components/Nav";
+import { Nav, NewPost } from "./components";
 
-function App() {
+export default function App() {
   const [tab, setTab] = useState(1);
-  const components = ["Dashboard", "New Post", "Preview", "Uploaded", "Draft"];
+  const components = ["Dashboard", <NewPost />, "Preview", "Uploaded", "Draft"];
 
   return (
     <div className="App">
@@ -13,5 +13,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
