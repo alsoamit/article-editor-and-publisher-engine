@@ -1,8 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: whitesmoke;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 1.6rem;
 }
 
 code {
@@ -11,4 +24,18 @@ code {
 
 .ql-editor {
     min-height: 600px;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
 }

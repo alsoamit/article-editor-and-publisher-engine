@@ -1,0 +1,118 @@
+header {
+    width: 100%;
+    background: whitesmoke;
+    padding: 0 2rem;
+}
+
+.hamb {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    flex-flow: column nowrap;
+    z-index: 1000;
+}
+
+.hamb span {
+    display: block;
+    height: 4px;
+    background-color: black;
+    margin: 2px;
+    cursor: pointer;
+}
+
+header nav {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul li {
+    /* display: inline-block; */
+    height: 100%;
+    padding: 0 4rem;
+    cursor: pointer;
+}
+
+.active {
+    border: 1px solid rgba(0, 0, 0, 0.13);
+    background-color: white !important;
+    border-bottom: none;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+
+
+/* styles for menu items */
+
+.menu__items {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: whitesmoke;
+    max-height: 50rem;
+    overflow: hidden;
+    z-index: 100;
+    padding: 8rem 0 2rem;
+    border-bottom: 2px solid dodgerblue;
+}
+
+.menu__items li {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 1.2rem;
+}
+
+.nav__items {
+    display: none;
+    height: 100%;
+    padding-top: 1rem;
+}
+
+.nav__items li {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* @media only screen and(max-width: 600px) {
+    .menu__items {
+        display: none;
+    }
+    .active {
+        display: none;
+    }
+}
+
+@media only screen and(max-width: 601px) {
+    .nav__items {
+        display: flex;
+    }
+    .active {
+        display: none;
+    }
+} */
+
+@media only screen and (min-width: 600px) {
+    header {
+        padding: 0;
+    }
+    nav .menu__items {
+        display: none;
+    }
+    nav .active__menu {
+        display: none;
+    }
+    nav .hamb {
+        display: none;
+    }
+    .nav__items {
+        display: flex;
+    }
+}

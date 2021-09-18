@@ -1,11 +1,11 @@
-export default function Menu({ autosave, handleAutoSave }) {
+export default function Menu({ autosave, toggleAutoSave }) {
   return (
     <>
       <div>
         <label htmlFor="autosave">
           <input
             type="checkbox"
-            onClick={handleAutoSave}
+            onClick={toggleAutoSave}
             value={autosave}
             name="autosave"
           />
@@ -14,7 +14,7 @@ export default function Menu({ autosave, handleAutoSave }) {
         <label htmlFor="autosave">
           <input
             type="checkbox"
-            onClick={handleAutoSave}
+            onClick={toggleAutoSave}
             value={autosave}
             name="autosave"
           />
@@ -23,7 +23,7 @@ export default function Menu({ autosave, handleAutoSave }) {
         <label htmlFor="autosave">
           <input
             type="checkbox"
-            onClick={handleAutoSave}
+            onClick={toggleAutoSave}
             value={autosave}
             name="autosave"
           />
