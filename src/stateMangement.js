@@ -1,13 +1,17 @@
 import { createStore } from "redux";
 
 // Root Reducer
-function rootReducer(
+function rootReducer(state = null, action) {
     state = {
         published: [],
         drafts: [],
-    },
-    action
-) {
+    };
+    let history = localStorage.getItem("state");
+    if (history) {
+        state = JSON.parse(history);
+        console.log(history);
+    }
+
     if (action.type === "publish") {
         return {
             ...state,
@@ -31,7 +35,7 @@ function rootReducer(
             drafts: state.drafts.filter((draft) => draft.id !== action.payload.id),
         };
     }
-
+    // localStorage.setItem("state", JSON.stringify(state));
     return state;
 }
 

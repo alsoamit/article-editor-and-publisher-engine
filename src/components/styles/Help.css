@@ -1,0 +1,10 @@
+.help {
+    padding: 2rem;
+    min-height: 90vh;
+}
+
+.help ol,
+.help ul {
+    list-style: initial;
+    margin: 0 0 0 4rem;
+}

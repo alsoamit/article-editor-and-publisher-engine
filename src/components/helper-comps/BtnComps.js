@@ -1,5 +1,3 @@
-import { dispatcher } from "../../dispatcher";
-
 export function PreviewBtn({ type, posts, setPreview, id }) {
   let post = null;
   const getPost = (post) => {
@@ -9,9 +7,9 @@ export function PreviewBtn({ type, posts, setPreview, id }) {
     }
     // console.log("from filter", post.id, preview);
     return (
-      <div key={post.id}>
+      <div key={post.id} className="post__preview">
+        <img src={post.banner} alt={post.title} className="banner" />
         <h1>{post.title}</h1>
-        <img src={post.banner} alt={post.title} />
         <div dangerouslySetInnerHTML={{ __html: post.data.content }}></div>
         <BackBtn setPreview={setPreview} />
       </div>
@@ -26,6 +24,7 @@ export function PreviewBtn({ type, posts, setPreview, id }) {
 
   return (
     <button
+      className="btn btn-g"
       onClick={() => {
         setPreview(post);
         // console.log(post);
@@ -39,6 +38,7 @@ export function PreviewBtn({ type, posts, setPreview, id }) {
 function BackBtn({ setPreview }) {
   return (
     <button
+      className="btn"
       onClick={() => {
         setPreview(null);
       }}
@@ -51,6 +51,7 @@ function BackBtn({ setPreview }) {
 export function DeleteBtn({ type, dispatcher, id }) {
   return (
     <button
+      className="btn btn-d"
       onClick={() => {
         dispatcher(type, id);
       }}

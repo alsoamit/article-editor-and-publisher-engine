@@ -1,0 +1,64 @@
+.published {
+    overflow: hidden;
+    min-height: 90vh;
+}
+
+.posts {
+    display: grid;
+    padding: 2rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
+    grid-gap: 2rem;
+    grid-auto-rows: 30rem;
+}
+
+.posts .banner_wrap {
+    position: relative;
+    height: 15rem;
+    background: rgb(42, 42, 42);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.posts .banner_wrap img {
+    display: inline-block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.posts .post {
+    border: 1px solid rgba(0, 0, 0, 0.109);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.posts .post h1 {
+    height: 6rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.posts .btn {
+    height: 3.5rem;
+}
+
+.nothing {
+    height: 100%;
+    width: 100%;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: rgba(0, 183, 255, 0.158);
+    padding: 2rem;
+}
+
+.post__preview {
+    padding: 2rem;
+}
+
+.post__preview .banner {
+    max-height: 40rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin: 0 0 2rem 0;
+}

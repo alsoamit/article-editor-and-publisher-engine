@@ -9,7 +9,7 @@ import { store } from "../stateMangement";
 
 export default function NewPost() {
   const [title, setTitle] = useState("");
-  const [file, setFile] = useState(null);
+  const [file, setFile] = useState("./banner.png");
   const [autosave, setAutoSave] = useState(false);
   const [rtValue, setRtValue] = React.useState({ content: "" });
 
@@ -37,20 +37,35 @@ export default function NewPost() {
       payload: {
         id: uuid(),
         title,
-        banner: file,
+        banner:
+          file === "./banner.png"
+            ? "https://images.unsplash.com/photo-1629640570016-b81b0ab67548?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+            : file,
         data: rtValue,
       },
     });
   };
 
+  const reset = () => {
+    setRtValue({ content: "" });
+    setTitle("");
+    setFile("./banner.png");
+  };
+
   const onPublish = () => {
     dispatcher("publish");
+    reset();
     // console.log("published");
   };
 
   const onDraft = () => {
     dispatcher("draft");
+    reset();
     // console.log("dispatched");
+  };
+
+  const onDiscard = () => {
+    reset();
   };
 
   const handleTitleChange = (e) => {
@@ -60,12 +75,23 @@ export default function NewPost() {
 
   return (
     <main>
-      <input type="text" required onChange={handleTitleChange} />
-      <div>
+      <input
+        type="text"
+        className="title"
+        value={title}
+        placeholder="Title of the Post"
+        required
+        onChange={handleTitleChange}
+      />
+      <div
+        className={
+          file === "./banner.png" ? "banner placeholder" : "banner file"
+        }
+      >
+        <img src={file} alt="Upload The Banner" />
         <input type="file" onChange={handleFileChange} />
-        <img src={file} alt="banner" />
       </div>
-      <div>
+      <div className="editor__wrap">
         <Editor
           autosave={autosave}
           rtValue={rtValue}
@@ -73,7 +99,7 @@ export default function NewPost() {
         />
         <Menu autosave={autosave} toggleAutoSave={toggleAutoSave} />
       </div>
-      <Controls onPublish={onPublish} onDraft={onDraft} onDiscard={() => {}} />
+      <Controls onPublish={onPublish} onDraft={onDraft} onDiscard={onDiscard} />
     </main>
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Nav, Dashboard, NewPost, Posts, Drafts } from "./components";
+import { Nav, Dashboard, NewPost, Posts, Drafts, Help } from "./components";
 
 export default function App() {
   const [tab, setTab] = useState(1);
@@ -9,7 +9,7 @@ export default function App() {
     <NewPost />,
     <Posts />,
     <Drafts />,
-    "Draft",
+    <Help />,
   ];
 
   return (

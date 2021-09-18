@@ -1,0 +1,46 @@
+.dashboard {
+    padding: 5rem 2rem;
+    overflow: hidden;
+    min-height: 90vh;
+}
+
+.stats {
+    background: blueviolet;
+    min-height: 20rem;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.945);
+    display: flex;
+}
+
+.stats div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+.stats div p {
+    font-size: 8rem;
+    font-weight: bolder;
+}
+
+.titles {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+.recent {
+    margin-top: 5rem;
+}
+
+.post_preview {
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1rem 0;
+}

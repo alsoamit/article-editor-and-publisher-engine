@@ -7,6 +7,11 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { store } from "./stateMangement";
 
+// save the data to localstorage every time the state changes
+store.subscribe(() => {
+  localStorage.setItem("state", JSON.stringify(store.getState()));
+});
+
 // Render DOM
 ReactDOM.render(
   <Provider store={store}>

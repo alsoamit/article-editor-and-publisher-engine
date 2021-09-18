@@ -1,0 +1,212 @@
+main {
+    background: white;
+    min-height: 90vh;
+    padding: 5rem 2rem;
+}
+
+main .title {
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 0.5rem;
+    font-size: 2.2rem;
+    padding: 1rem;
+    font-family: serif;
+}
+
+main .title:focus {
+    outline: none;
+    border: 1px solid dodgerblue;
+}
+
+
+/* banner styles */
+
+main .banner {
+    position: relative;
+    height: 20rem;
+    background: rgb(47, 47, 47);
+    border-radius: 0.5rem;
+    margin: 3rem 0;
+}
+
+main .banner img {
+    border-radius: 0.5rem;
+}
+
+main .file img {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+main .banner input {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    z-index: 50;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    background: transparent;
+    opacity: 0;
+}
+
+main .placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .placeholder img {
+    display: inline-block;
+    max-height: 10rem;
+    max-width: 15rem;
+}
+
+main .editor__wrap {
+    display: flex;
+}
+
+main .editor__wrap .text-editor {
+    flex: 1;
+}
+
+main .editor__wrap .menu {
+    display: flex;
+    width: 20rem;
+    flex-flow: column;
+    align-items: center;
+    display: none;
+    /*hiding it in the mobile view*/
+}
+
+main .editor__wrap .menu h2 {
+    width: 13rem;
+    margin: 2rem 0;
+}
+
+main .editor__wrap .menu label {
+    width: 13rem;
+}
+
+.option {
+    min-width: 13rem;
+    margin: 1rem;
+}
+
+
+/* styles for editor */
+
+.text-editor {
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    border-radius: 0.5rem;
+}
+
+.ql-toolbar.ql-snow {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+.ql-container.ql-snow {
+    border: none;
+}
+
+.ql-formats {
+    margin-right: 0;
+    margin: 0.5rem 1.5rem 0.5rem 0;
+}
+
+.ql-container {
+    font-size: 1.6rem;
+}
+
+.ql-editor {
+    line-height: 1.6;
+}
+
+
+/* styles for the switch */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    max-width: 30px;
+    height: 17px;
+    display: flex;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(13px);
+    -ms-transform: translateX(13px);
+    transform: translateX(13px);
+}
+
+.slider.round {
+    border-radius: 17px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.info {
+    position: absolute;
+    right: 0;
+    transform: translateX(110%);
+}
+
+@media only screen and (min-width: 600px) {
+    main .banner {
+        height: 40rem;
+    }
+    main .placeholder img {
+        max-height: 20rem;
+        max-width: 25rem;
+    }
+    main .editor__wrap .menu {
+        display: flex;
+    }
+}

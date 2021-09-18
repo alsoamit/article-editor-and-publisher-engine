@@ -26,10 +26,10 @@ export const tabs = [{
     },
     {
         id: 3,
-        name: "Draft",
+        name: "Drafts",
     },
     {
         id: 4,
-        name: "Draft",
+        name: "Help",
     },
 ];
