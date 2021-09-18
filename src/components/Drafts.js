@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./styles/Posts.css";
 import { connect } from "react-redux";
-import { mapDispatchToProp, mapStateToProp } from "./consts";
-import { DeleteBtn, PreviewBtn } from "./helper-comps/BtnComps";
+import { mapDispatchToProp, mapStateToProp } from "./fragments/consts";
+import { DeleteBtn, PreviewBtn } from "./fragments/BtnComps";
 
 export function Drafts({ posts, dispatcher }) {
   const [preview, setPreview] = useState(null);

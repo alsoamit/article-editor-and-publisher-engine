@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { tabs } from "./consts";
+import { tabs } from "./fragments/consts";
 import "./styles/Nav.css";
 export default function Nav({ setTab }) {
   const [active, setActive] = useState(1);
@@ -49,15 +49,13 @@ export default function Nav({ setTab }) {
   return (
     <header>
       <nav>
-        <div className="active__menu">{tabs[active].name}</div>
+        <div className="active__menu"> {tabs[active].name} </div>
         <ul className={hamb ? "menu__items" : "menu__items hide"}>
           {menuElements}
         </ul>
-        <ul className="nav__items">{tabElements}</ul>
+        <ul className="nav__items"> {tabElements} </ul>
         <div className="hamb" onClick={handleHambClick}>
-          <span></span>
-          <span></span>
-          <span></span>
+          <span> </span> <span> </span> <span> </span>
         </div>
       </nav>
     </header>

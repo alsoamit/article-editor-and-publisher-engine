@@ -1,6 +1,6 @@
 import React from "react";
 import ReactQuill from "react-quill";
-import EditorToolbar, { modules, formats } from "./EditorTools";
+import EditorToolbar, { modules, formats } from "./fragments/EditorTools";
 import "react-quill/dist/quill.snow.css";
 
 export default function Editor({ rtValue, handleQuilChange }) {

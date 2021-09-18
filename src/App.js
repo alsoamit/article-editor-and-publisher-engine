@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./styles/App.css";
 import { Nav, Dashboard, NewPost, Posts, Drafts, Help } from "./components";
 
 export default function App() {

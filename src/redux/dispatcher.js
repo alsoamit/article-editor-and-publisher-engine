@@ -1,4 +1,4 @@
-import { store } from "./stateMangement";
+import { store } from "./postStore";
 
 // The action dispatcher
 export const dispatcher = (type, id) => {

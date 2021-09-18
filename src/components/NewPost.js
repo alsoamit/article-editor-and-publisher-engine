@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./styles/NewPost.css";
 import { Editor } from ".";
-import { Menu, Controls } from "./helper-comps";
+import { Menu, Controls } from "./fragments";
 import uuid from "react-uuid";
 
 // import the store
-import { store } from "../stateMangement";
+import { store } from "../redux/postStore";
 
 export default function NewPost() {
   const [title, setTitle] = useState("");

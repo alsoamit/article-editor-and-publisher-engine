@@ -1,4 +1,4 @@
-import { dispatcher } from "../dispatcher";
+import { dispatcher } from "../../redux/dispatcher";
 
 export const mapStateToProp = (state) => {
     return {

@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./styles/index.css";
 import App from "./App";
 
 // state management
 import { Provider } from "react-redux";
-import { store } from "./stateMangement";
+import { store } from "./redux/postStore";
 
 // save the data to localstorage every time the state changes
 store.subscribe(() => {
