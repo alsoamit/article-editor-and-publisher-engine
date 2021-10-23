@@ -8,12 +8,13 @@ export function Drafts({ posts, dispatcher }) {
   const [preview, setPreview] = useState(null);
   // console.log("posts", posts);
   const listOfPosts = posts.drafts.map((post) => {
-    // console.log("post", post, "content", post.data.content);
+    // console.log("post", post, "content", post.data.content, post.title);
     return (
       <div key={post.id} className="post">
         <div className="banner_wrap">
           <img src={post.banner} alt={post.title} className="banner" />
         </div>
+        <h1 className="title">{post.title}</h1>
         <PreviewBtn
           type="drafts"
           posts={posts}

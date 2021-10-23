@@ -5,7 +5,7 @@ import App from "./App";
 
 // state management
 import { Provider } from "react-redux";
-import { store } from "./redux/postStore";
+import { store } from "./redux/";
 
 // save the data to localstorage every time the state changes
 store.subscribe(() => {

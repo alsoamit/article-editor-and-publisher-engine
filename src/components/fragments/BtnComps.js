@@ -1,3 +1,5 @@
+import { notify } from "../../redux";
+
 export function PreviewBtn({ type, posts, setPreview, id }) {
   let post = null;
   const getPost = (post) => {
@@ -54,6 +56,7 @@ export function DeleteBtn({ type, dispatcher, id }) {
       className="btn btn-d"
       onClick={() => {
         dispatcher(type, id);
+        notify("Post Deleted");
       }}
     >
       Delete

@@ -65,7 +65,6 @@ const data = `<div>
     The Web App doesn't have the feature of Editing the Draft yet.
   </li>
   <li>Options Menu doesn't work currently.</li>
-  <li>Notification features are not implemented.</li>
 </ol>
 <p>
   <br />

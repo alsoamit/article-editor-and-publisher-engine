@@ -3,9 +3,10 @@ import "./styles/NewPost.css";
 import { Editor } from ".";
 import { Menu, Controls } from "./fragments";
 import uuid from "react-uuid";
+import { notify } from "../redux/actions"; // to push notifications
 
 // import the store
-import { store } from "../redux/postStore";
+import { store } from "../redux/";
 
 export default function NewPost() {
   const [title, setTitle] = useState("");
@@ -55,17 +56,20 @@ export default function NewPost() {
   const onPublish = () => {
     dispatcher("publish");
     reset();
+    notify("Post Published");
     // console.log("published");
   };
 
   const onDraft = () => {
     dispatcher("draft");
     reset();
+    notify("Saved to Drafts");
     // console.log("dispatched");
   };
 
   const onDiscard = () => {
     reset();
+    notify("Post Discarded");
   };
 
   const handleTitleChange = (e) => {

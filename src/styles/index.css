@@ -14,7 +14,7 @@ body {
     padding-bottom: 5rem;
     font-family: 'Poppins', sans-serif;
     background-color: whitesmoke;
-    color: rgba(0, 0, 0, 0.85);
+    color: rgba(0, 0, 0, 0.63);
     font-size: 1.6rem;
     line-height: 1.6;
 }
@@ -66,14 +66,14 @@ a {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    border-radius: 2rem;
+    border-radius: 0.8rem;
     background: transparent;
     margin: 2rem 2rem 2rem 0;
+    border: none;
     color: rgba(30, 143, 255, 0.89);
     cursor: pointer;
     transition: all 0.3s;
-    border: 1px solid rgba(30, 143, 255, 0.24);
-    box-shadow: 0px 0px 0px 2px rgba(30, 143, 255, 0.055);
+    box-shadow: 0px 0px 0px 3px rgba(30, 143, 255, 0.295);
 }
 
 .btn:hover {
@@ -83,7 +83,6 @@ a {
 
 .btn-g {
     color: rgba(0, 100, 0, 0.835);
-    border: 1px solid rgba(0, 41, 0, 0.26);
     box-shadow: 0px 0px 0px 2px rgba(0, 70, 0, 0.055);
 }
 
@@ -94,7 +93,6 @@ a {
 
 .btn-d {
     color: rgba(255, 0, 0, 0.918);
-    border: 1px solid rgba(255, 0, 0, 0.24);
     box-shadow: 0px 0px 0px 2px rgba(70, 0, 0, 0.055);
 }
 

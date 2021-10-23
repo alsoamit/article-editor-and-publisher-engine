@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { tabs } from "./fragments/consts";
 import "./styles/Nav.css";
+
 export default function Nav({ setTab }) {
   const [active, setActive] = useState(1);
   const [hamb, setHamb] = useState(false);
@@ -9,7 +10,7 @@ export default function Nav({ setTab }) {
   const handleTabClick = (e, tab) => {
     setTab(tab.id);
     setActive(tab.id);
-    console.log(e.target, e.target.classList);
+    // console.log(e.target, e.target.classList);
   };
 
   const handleMenuClick = (e, tab) => {
@@ -17,6 +18,7 @@ export default function Nav({ setTab }) {
     setActive(tab.id);
     handleHambClick();
   };
+
   // Hamburger menu toggler
   const handleHambClick = () => {
     setHamb((hamb) => !hamb);

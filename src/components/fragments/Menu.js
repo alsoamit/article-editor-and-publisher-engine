@@ -4,38 +4,38 @@ export default function Menu({ autosave, toggleAutoSave }) {
       <div className="menu">
         <h2>Options</h2>
         <div className="option">
-          <label class="switch">
+          <label className="switch">
             <input
               type="checkbox"
               onClick={toggleAutoSave}
               value={autosave}
               name="autosave"
             />
-            <span class="slider round"></span>
+            <span className="slider round"></span>
             <span className="info">Autosave</span>
           </label>
         </div>
         <div className="option">
-          <label class="switch">
+          <label className="switch">
             <input
               type="checkbox"
               // onClick={toggleAutoSave}
               value={autosave}
               name="autosave"
             />
-            <span class="slider round"></span>
+            <span className="slider round"></span>
             <span className="info">Anonymous</span>
           </label>
         </div>
         <div className="option">
-          <label class="switch">
+          <label className="switch">
             <input
               type="checkbox"
               // onClick={toggleAutoSave}
               value={autosave}
               name="autosave"
             />
-            <span class="slider round"></span>
+            <span className="slider round"></span>
             <span className="info">Public</span>
           </label>
         </div>

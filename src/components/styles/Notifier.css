@@ -1,0 +1,22 @@
+.notifications-wrap {
+    height: 4rem;
+    padding: 0 2rem;
+    background-color: rgba(255, 255, 255, 0.808);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    box-shadow: 0px 0px 1px 2px rgba(0, 0, 0, 0.137);
+    bottom: 2rem;
+    right: 2rem;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+    transform: translateX(150%);
+    margin: auto;
+    border-radius: 1rem;
+}
+
+.show {
+    transform: translateX(0%);
+}
