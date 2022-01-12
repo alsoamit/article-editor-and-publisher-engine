@@ -1,8 +1,9 @@
 ## How to use?
 
-1. Run `npm i` after cloning the project
-2. Run `npm start`
+1. Clone the repo.
+2. Run `npm ci`.
+3. Run `npm start`
 
 ## Live Preview
 
-Follow the [link](https://the-vocifer.netlify.app/) for live preview
+Follow the [link](https://article-editor-and-publisher.netlify.app/) for live preview
